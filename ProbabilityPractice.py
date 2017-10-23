@@ -11,3 +11,7 @@ for _ in range(100000):
     if (random.random() < purchaseProbability):
         totalPurchases += 1
         purchases[ageGroup] += 1
+PEF = float(purchases[30]) / float(totals[30])
+print("P(purchase | 30s): " + str(PEF))
+PE = float(totalPurchases) / 100000.0
+print("P(Purchase):" + str(PE))
